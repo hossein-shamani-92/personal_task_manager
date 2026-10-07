@@ -4,5 +4,11 @@ name = input("what is your name? ")
 print("Welcome " + name)
 while True:
     user_tasks = input("put a task: ")
-    tasks. append(user_tasks)
+
+    if user_tasks == "done":
+        with open("tasks.txt", "a") as file:
+            file.write(f"user name is '{name}' user tasks are {tasks}\n")
+            break
+
+    tasks.append (user_tasks)
     print(f"your tasks are {tasks}")
