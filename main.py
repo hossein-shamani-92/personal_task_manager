@@ -11,7 +11,7 @@ if open_admin.lower() == "yes":
     entered_password = input("enter admin password: ")
 
     if entered_password == admin_password:
-        print("admin! hi...")
+        print("$$$ Hey admin... $$$")
     else:
         print("wrong password")
 
