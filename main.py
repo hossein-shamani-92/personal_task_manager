@@ -7,19 +7,23 @@ load_dotenv()
 name = input("enter your name: ")
 print("welcome", name)
 
-
-admin_mode = input("do you want to enter admin mode? (yes/no)")
+admin_mode = input("do you want to enter admin mode? (yes/no) ")
 if admin_mode == "yes":
     admin_password = input("enter admin password: ")
-    if admin_password == os.getenv("admin_pass") :
+    if admin_password == os.getenv("admin_pass"):
         print("admin mode activated")
     else:
-        print("wrong_password")
+        print("wrong password")
 
 tasks = load_tasks()
 count = int(input("how many tasks do you want to add? : "))
 for i in range(count):
-    task = input("enter a task: ")
+    task_name = input("enter a task: ")
+    priority = input("enter priority(low/medium/high):").lower()
+    task = {
+        "name": task_name,
+        "priority": priority
+    }
     tasks.append(task)
 
 show_tasks(tasks)

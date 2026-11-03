@@ -1,8 +1,8 @@
 import json
 
 def show_tasks(tasks):
-    for task in tasks:
-        print(task)
+    for task in tasks :
+        print(task["name"], "- priority: ", task["priority"])
 
 def save_tasks(tasks):
     with open("tasks.json", "w", encoding="utf-8") as file:
@@ -14,4 +14,3 @@ def load_tasks():
             return json.load(file)
     except FileNotFoundError:
         return []
-    
