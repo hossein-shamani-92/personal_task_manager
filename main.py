@@ -5,7 +5,8 @@ import os
 load_dotenv()
 
 name = input("enter your name: ")
-print("welcome", name, "welcome ro personal task manager")
+
+print("welcome back", name)
 
 admin_mode = input("do you want to enter admin mode? (yes/no) ")
 if admin_mode == "yes":
